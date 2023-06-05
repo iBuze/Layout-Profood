@@ -2,7 +2,7 @@
 
 ## Descrição
 
-Este projeto consiste na criação de um layout para integração entre o sistema Sankhya e a plataforma de autenticação da empresa BLP. O objetivo é facilitar a autenticação dos usuários no sistema Sankhya utilizando a plataforma Autentique da BLP.
+Este projeto consiste na criação de um layout para integração entre o sistema Sankhya e autentique que será desenvolvida pela empresa BLP.
 
 O layout foi desenvolvido utilizando 100% HTML e a biblioteca de estilização Tailwind CSS. O Tailwind CSS é uma ferramenta de utilitários CSS altamente customizável, que permite a criação rápida e eficiente de estilos para o projeto.
 
