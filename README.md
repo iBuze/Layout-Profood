@@ -13,13 +13,6 @@ O projeto tem como objetivo
 2. Integração com o sistema Sankhya x Autentique.
 3. Desenvolvido com HTML e Tailwind CSS.
 
-## Requisitos
-
-Antes de executar o projeto, certifique-se de ter as seguintes dependências instaladas:
-
-1. Navegador web compatível.
-2. Conexão à internet para acessar a plataforma Autentique.
-
 ## Como executar o projeto
 
 1. Clone este repositório em sua máquina local:
