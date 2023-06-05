@@ -27,7 +27,7 @@ Antes de executar o projeto, certifique-se de ter as seguintes dependências ins
 https://github.com/iBuze/Layout-Profood.git
 ```
 2. Navegue até o diretório do projeto:
-cd nome-do-repositorio
+cd Layout-Profood
 3. Abra o arquivo `index.html` em seu navegador web.
 
 
