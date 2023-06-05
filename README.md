@@ -8,11 +8,10 @@ O layout foi desenvolvido utilizando 100% HTML e a biblioteca de estilização T
 
 ## Funcionalidades
 
-O projeto oferece as seguintes funcionalidades:
+O projeto tem como objetivo
 
-1. Autenticação de usuários utilizando a plataforma Autentique da BLP.
-2. Integração com o sistema Sankhya para autenticação dos usuários.
-3. Layout responsivo e intuitivo, desenvolvido com HTML e Tailwind CSS.
+2. Integração com o sistema Sankhya x Autentique.
+3. Desenvolvido com HTML e Tailwind CSS.
 
 ## Requisitos
 
@@ -25,8 +24,8 @@ Antes de executar o projeto, certifique-se de ter as seguintes dependências ins
 
 1. Clone este repositório em sua máquina local:
 ```bash
-git clone https://github.com/seu-usuario/nome-do-repositorio.git
-   ```
+https://github.com/iBuze/Layout-Profood.git
+```
 2. Navegue até o diretório do projeto:
 cd nome-do-repositorio
 3. Abra o arquivo `index.html` em seu navegador web.
