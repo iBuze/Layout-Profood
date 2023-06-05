@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ordem de Venda</title>
+  <style>
+    @media print {
+      div {
+        background: url(your-image-url) !important;
+        -webkit-print-color-adjust: exact;
+      }
+
+      td {
+        white-space: nowrap;
+      }
+
+      .description {
+        white-space: normal !important;
+      }
+    }
+
+    .quebra-pagina {
+      page-break-before: always;
+    }
+
+    .linha-assinatura {
+      border-top: 1px solid black;
+      margin-top: 20px;
+      width: 400px;
+      padding-top: 10px;
+    }
+
+    .linha-assinatura span {
+      display: inline-block;
+      width: 150px;
+      text-align: center;
+    }
+
+    thead {
+      display: table-header-group;
+    }
+
+    tfoot {
+      display: table-row-group;
+    }
+
+    tr {
+      page-break-inside: avoid;
+    }
+  </style>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet" />
+</head>
+
+<body class="bg-gray-100">
+
+  <div class="max-w-4xl mx-auto p-8 bg-white rounded-lg">
+    <table>
+      <tr>
+        <div class="justify-between flex p-8">
+          <div class="flex flex-col ">
+            <img src="https://i.imgur.com/cf50KZ1.png" alt="Logo" class="w-32  mb-2" />
+            <div class="flex flex-col text-gray-700">
+              <span class="text-xs">TUICIAL INDUSTRIA GRAFICA E EDITORA LTDA</span>
+              <div class="flex items-center space-x-6 text-xs">
+                <span>CNPJ - 77.604.163/0003-70</span>
+                <span>IE - 90969953-31</span>
+              </div>
+              <div class="flex items-center space-x-6 ">
+                <span class="text-xs">sac@profood.com.br</span>
+                <!-- Vendedor  -->
+                <span class="text-xs">{vendedor@profood.com.br}</span>
+              </div>
+            </div>
+          </div>
+          <div class="text-right w-full items-center">
+            <p class="text-2xl font-bold text-red-700">Pedido de Venda</p>
+            <p class="text-xs text-gray-700">
+              <!-- N° do pedido -->
+              N° do pedido: <span class="font-bold text-xl">{123456}</span>
+            </p>
+            <p class="text-xs text-gray-700">
+              Data do Pedido:
+              <!-- Data do pedido -->
+              <span class="font-semibold text-xs">{01/01/0001}</span>
+            </p>
+            <p class="text-xs text-gray-700">
+              Previsão de entrega:
+              <!-- Data da previsão de entrega -->
+              <span class="font-semibold text-xs">{02/02/0002}</span>
+            </p>
+          </div>
+        </div>
+      </tr>
+      <tbody>
+        <div class="flex justify-between space-x-10 font-sans text-gray-800">
+          <div class="bg-white p-6 rounded-lg shadow-md w-1/2">
+            <h2 class="text-xs font-semibold text-red-600 uppercase tracking-widest text-center">
+              Dados do cliente
+            </h2>
+            <div class="flex justify-between items-center text-xs">
+              <p class="font-semibold">Nome:</p>
+              <!-- Nome do cliente -->
+              <span>{Nome da empresa}</span>
+            </div>
+            <div class="flex justify-between items-center text-xs">
+              <p class="font-semibold">Razao social:</p>
+              <!-- Razao social do cliente -->
+              <span>{Razao social da empresa}</span>
+            </div>
+            <div class="flex justify-between items-center text-xs">
+              <p class="font-semibold">CNPJ:</p>
+              <!-- CNPJ do cliente -->
+              <span>{11.111.111/0001-11}</span>
+            </div>
+            <div class="flex justify-between items-center text-xs">
+              <p class="font-semibold">Telefone:</p>
+              <!-- Telefone do cliente -->
+              <span>{(11) 1111-1111}</span>
+            </div>
+            <div class="flex justify-between items-center text-xs">
+              <p class="font-semibold">Email Contato:</p>
+              <!-- Email do cliente -->
+              <span>{sistemas@profood.com.br}</span>
+            </div>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-md w-1/2">
+            <h2 class="text-xs font-semibold text-red-600 uppercase tracking-widest text-center">
+              Dados de entrega
+            </h2>
+            <div class="justify-between flex items-center space-x-2 text-xs">
+              <p class="font-semibold">Endereço:</p>
+              <!-- Endereço do cliente -->
+              <span>{Rua A, Nº B}</span>
+            </div>
+            <div class="flex justify-between items-center space-x-1 text-xs">
+              <p class="font-semibold">Cidade:</p>
+              <!-- Cidade do cliente -->
+              <span>{São Paulo}
+                <span> - </span>
+               <!-- Estado do cliente -->
+                <span>{SP}</span>
+              </span>
+            </div>
+            <div class="flex justify-between items-center text-xs">
+              <p class="font-semibold">Bairro:</p>
+              <!-- Bairro do cliente -->
+              <span>{Centro}</span>
+            </div>
+            <div class="flex justify-between items-center text-xs">
+              <p class="font-semibold">Complemento:</p>
+              <!-- Complemento do cliente -->
+              <span>{Perto da Igreja}</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8">
+          <h2 class="text-xs font-bold text-red-700 mb-2">Itens do Pedido</h2>
+          <table class="table-auto border-collapse border border-black w-full mb-6">
+            <thead class="bg-red-700 text-white">
+              <tr>
+                <th class="border border-black border-t-black py-2 text-xs">Código</th>
+                <th class="border border-black  text-xs">Descrição</th>
+                <th class="border border-black  text-xs">Qnt</th>
+                <th class="border border-black  text-xs">Un</th>
+                <th class="border border-black  text-xs">Unit</th>
+                <th class="border border-black  text-xs">IPI</th>
+                <th class="border border-black  text-xs">Total</th>
+              </tr>
+            </thead>
+            <tbody class="bg-white">
+              <tr class="text-gray-700">
+                <!-- Codigo do item -->
+                <td class="border border-black px-1 py-1 text-xs">{XYZ123}</td>
+                <!-- Descrição do item -->
+                <td class="border border-black px-1 py-1 text-xs description whitespace-normal">
+                  {Descrição do item 1 Descrição do item 1 Descrição do item 1}
+                </td>
+                <!-- Quantidade do item -->
+                <td class="border border-black px-1 py-1 text-xs">{10}</td>
+                <!-- Unidade do item -->
+                <td class="border border-black px-1 py-1 text-xs">{PC}</td>
+                <!-- Valor unitario do item -->
+                <td class="border border-black px-1 py-1 text-xs">{R$ 10,00}</td>
+                <!-- IPI do item -->
+                <td class="border border-black px-1 py-1 text-xs">{9,75%}</td>
+                <!-- Total do item -->
+                <td class="border border-black px-1 py-1 text-xs">{R$ 100,00}</td>
+              </tr>
+              
+            </tbody>
+          </table>
+
+          <div class="space-y-6">
+            <div class="rounded-md bg-gray-100 p-4 flex justify-between">
+              <div class=" rounded-md space-y-1 text-gray-700 flex-col border-gray-300">
+                <div class="text-xs space-x-1 flex">
+                  <p class=" font-bold">
+                    Condições de Pagamento:
+                  </p>
+                  <!-- Condições de pagamento -->
+                  <span>{A vista / 30 dias / 60 dias}</span>
+                </div>
+
+                <div class="text-xs space-x-1 flex">
+                  <p class=" font-bold">
+                    Frete:
+                  </p>
+                  <!-- Frete -->
+                  <span>{CIF / FOB}</span>
+                </div>
+                <div class="text-xs space-x-1 flex">
+                  <p class=" font-bold">
+                    Representante:
+                  </p>
+                  <!-- Representante -->
+                  <span>{Nome do representante}</span>
+                </div>
+              </div>
+              <div>
+                <table class="flex">
+                  <tr>
+                    <td class="text-xs px-4">Total Produto:</td>
+                    <!-- Total -->
+                    <td class="text-xs font-bold">{R$ 1000,00}</td>
+                  </tr>
+                  <tr>
+                    <td class="text-xs px-4">Total IPI:</td>
+                    <!-- IPI -->
+                    <td class="text-xs font-bold">{R$ 1000,00}</td>
+                  </tr>
+                  <tr>
+                    <td class="text-xs px-4">Frete:</td>
+                    <!-- Frete -->
+                    <td class="text-xs font-bold">{R$ 00,00}</td>
+                  </tr>
+                  <tr>
+                    <td class="text-xs px-4">Total Pedido:</td>
+                    <!-- Total -->
+                    <td class="text-xs font-bold">{R$ 1000,00}</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <div class="flex flex-col text-gray-700">
+              <h2 class="text-xs font-bold text-red-700 mb-2">Observações</h2>
+              <!-- Observações -->
+              <p class="text-xs">
+                {Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit quasi aspernatur doloribus
+                reprehenderit magnam consequuntur esse natus illo praesentium exercitationem nobis quis odit maiores
+                voluptates quas enim sed, ratione maxime?}
+              </p>
+            </div>
+            <div class="quebra-pagina justify-center text-center">
+              <tr>
+                <div class="justify-between flex p-8">
+                  <div class="flex flex-col ">
+                    <img src="https://i.imgur.com/cf50KZ1.png" alt="Logo" class="w-32  mb-2" />
+                    <div class="flex flex-col text-gray-700">
+                      <span class="text-xs">TUICIAL INDUSTRIA GRAFICA E EDITORA LTDA</span>
+                      <div class="flex items-center space-x-6 text-xs">
+                        <span>CNPJ - 77.604.163/0003-70</span>
+                        <span>IE - 90969953-31</span>
+                      </div>
+                      <div class="flex items-center space-x-6 ">
+                        <span class="text-xs">sac@profood.com.br</span>
+                        <!-- Email Vendedor -->
+                        <span class="text-xs">{vendedor@profood.com.br}</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="text-right w-full items-center">
+                    <p class="text-2xl font-bold text-red-700">Pedido de Venda</p>
+                    <p class="text-xs text-gray-700">
+                      <!-- Numero do pedido -->
+                      N° do pedido: <span class="font-bold text-xl">{123456}</span>
+                    </p>
+                    <p class="text-xs text-gray-700">
+                      Data do Pedido:
+                      <!-- Data -->
+                      <span class="font-semibold text-xs">{01/01/0001}</span>
+                    </p>
+                    <p class="text-xs text-gray-700">
+                      Previsão de entrega:
+                      <!-- Data de previsão de entrega -->
+                      <span class="font-semibold text-xs">{02/02/0002}</span>
+                    </p>
+                  </div>
+                </div>
+              </tr>
+                <p class="text-xs pt-96">
+                  1. A organização reserva-se o direito de entregar 10% a mais ou a menos da quantidade solicitada,
+                  mantendo-se o preço unitário aprovado;
+                </p>
+                <p class="text-xs">
+                  2. As partes declaram sua expressa concordância com a assinatura eletrônica deste documento nos termos
+                  do artigo 10, §2º, da Medida Provisória nº 2.200-2, tendo seu processamento por meio da plataforma
+                  denominada “Autentique”, concordando e reconhecem
+                  como válida a assinatura com certificado da plataforma ainda que não utilize o certificado digital
+                  emitido no padrão ICP-Brasil, sem qualquer limitação de validade e/ou de exequibilidade, servindo os
+                  seus endereços
+                  eletrônicos como destinatário dos assinantes;
+                </p>
+                </p>
+                <div class="justify-center mt-32 flex text-center">
+                  <div class="linha-assinatura">
+                    <!-- Assinatura -->
+                    <span>Assinatura do Responsável</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </tbody>
+    </table>
+  </div>
+</body>
+
+</html>
